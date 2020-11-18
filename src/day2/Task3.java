@@ -6,16 +6,18 @@ import static java.lang.Math.*;
 public class Task3 {
     public static void main(String [] args) {
         Scanner s = new Scanner(System.in);
-        System.out.println("Введите x3");
-        double x = s.nextDouble();
-        double y;
-        if (x>=5) {
-            y=(pow(x,2)-10)/(x+7);
-        }else if(x>-3) {
-            y=(x+3)*(pow(x,2)-2);
+        int a = s.nextInt();
+        int b = s.nextInt();
+        if(a>=b) {
+            System.out.print("Некорректный ввод");
         }else {
-            y=420;
+            int i=a;
+            while (i<b) {
+                if(i%5==0 && i%10!=0){
+                    System.out.print(i+" ");
+                }
+                i++;
+            }
         }
-        System.out.print(y);
     }
 }

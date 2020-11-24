@@ -15,7 +15,7 @@ public class Task1 {
         int countOdd = 0;
         int sum = 0;
         for (int i=0; i<size; i++) {
-            number[i] = (int) (Math.random() * 10);
+            number[i] = (int) (Math.random() * 11);
             if (number[i]>8){
                 countMoreThatEight++;
             }

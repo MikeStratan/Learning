@@ -8,25 +8,24 @@ public class Task2 {
         Scanner s = new Scanner(System.in);
         int[]  number = new int [100];
         int numberLargest = 0;
-        int numberSmallest = 0;
+        int numberSmallest = 10000;
         int countEndsZero = 0;
         int sumEndsZero = 0;
         for (int i=0; i<100; i++) {
             number[i] = (int) (Math.random() * 10000);
-            if (i==0){
-                numberSmallest = number[i];
-            }
-            if (number[i]>numberLargest){
-                numberLargest = number[i];
-            }
-            if (number[i]<numberSmallest) {
-                numberSmallest = number[i];
-            }
-            if (number[i]%10==0) {
-                countEndsZero++;
-                sumEndsZero+=number[i];
-            }
         }
+            for(int array:number){
+                if (array>numberLargest){
+                    numberLargest = array;
+                }
+                if (array<numberSmallest) {
+                    numberSmallest = array;
+                }
+                if (array%10==0) {
+                    countEndsZero++;
+                    sumEndsZero+=array;
+                }
+            }
         System.out.println(Arrays.toString(number));
         System.out.println("наибольший элемент массива: "+numberLargest);
         System.out.println("наименьший элемент массива: "+numberSmallest);

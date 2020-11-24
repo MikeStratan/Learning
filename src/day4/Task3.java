@@ -16,7 +16,7 @@ public class Task3 {
             }
             if (sumMax<=sumLine){
                 sumMax=sumLine;
-                pointer = i+1;
+                pointer = i;
             }
             System.out.println(Arrays.toString(number[i])+"    "+sumLine);
         }

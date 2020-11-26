@@ -11,12 +11,13 @@ public class Task2 {
         Player player7 = new Player();
         Player player8 = new Player();
         System.out.println(player1.getCountPlayers());
-        player1.info();
+        Player.info();
         int player1MaxStamina = player1.getStamina();
         for(int i=0; i<player1MaxStamina;i++){
             player1.run(player1);
         }
-        player1.info();
+        System.out.println(player1.getCountPlayers());
+        Player.info();
     }
 }
 class Player{
@@ -47,16 +48,16 @@ class Player{
                 }
             }
         }
-        public void info(){
+        public static void info(){
             if(countPlayers>=6) {
                 System.out.println("На поле нет свободных мест");
             } else if(countPlayers==5) {
-                System.out.println("На поле есть 1 свободное место");
+                System.out.println("Команды неполные. На поле есть 1 свободное место");
             }
             else if (countPlayers == 1) {
-                System.out.println("На поле есть 5 свободных мест");
+                System.out.println("Команды неполные. На поле есть 5 свободных мест");
             } else{
-                System.out.println("На поле есть "+countPlayers+" свободных места");
+                System.out.println("Команды неполные. На поле есть "+countPlayers+" свободных места");
             }
         }
     }

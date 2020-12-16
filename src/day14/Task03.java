@@ -26,11 +26,12 @@ public class Task03 {
         while(scanner.hasNextLine()){
             personParameters = scanner.nextLine().split(" ");
             if (Integer.parseInt(personParameters[1])<0){
+                scanner.close();
                 throw new DataFormatException();
             }
             person.add(new Person(personParameters[0],Integer.parseInt(personParameters[1])));
-
         }
+        scanner.close();
         return person;
     }
 }

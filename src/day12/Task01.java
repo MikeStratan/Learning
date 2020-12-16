@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class Task01 {
     public static void main(String[] args){
-        ArrayList<String> cars = new ArrayList<String>(Arrays.asList("Ока","Нива","ВАЗ","ГАЗ","ЛИАЗ"));
+        ArrayList<String> cars = new ArrayList<>(Arrays.asList("Ока","Нива","ВАЗ","ГАЗ","ЛИАЗ"));
         for(String car : cars){
             System.out.println(car);
         }

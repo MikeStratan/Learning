@@ -58,16 +58,13 @@ public class BinaryTree {
         ArrayList<Node> currentLevel = new ArrayList<>();
         ArrayList<Node> nextLevel = new ArrayList<>();
         StringBuilder s1=new StringBuilder();
-        StringBuilder s2=new StringBuilder();
 
         currentLevel.add(root);
 
         while (!currentLevel.isEmpty()) {
             System.out.println(s1);
-            System.out.println(s2);
             Iterator<Node> iter = currentLevel.iterator();
             s1.setLength(0);
-            s2.setLength(0);
             while (iter.hasNext()) {
                 Node currentNode = iter.next();
                 if (currentNode.getLeft() != null) {
@@ -76,19 +73,6 @@ public class BinaryTree {
                 if (currentNode.getRight() != null) {
                     nextLevel.add(currentNode.getRight());
                 }
-                /*
-                if (currentNode.getLeft() != null && currentNode.getRight() != null){
-                    for (int k=0;k<currentNode.getLeft().getValue()-selector;k++){
-                        s2.append(" ");
-                    }
-                    selector +=currentNode.getLeft().getValue();
-                    for(int i=0;i<currentNode.getRight().getValue()-currentNode.getLeft().getValue();i++) {
-                        s2.append("-");
-                    }
-                    selector+=currentNode.getRight().getValue()-currentNode.getLeft().getValue();
-
-                }*/
-                //else
                 for(int i=0;i<currentNode.getValue();i++) {
                     System.out.print(" ");
                     s1.append(" ");
@@ -112,9 +96,6 @@ public class BinaryTree {
                 }
                 else{
                     s1.append(" ".repeat(String.valueOf(Math.abs(currentNode.getValue())).length()));
-
-                    //s1.append("|");
-
                 }
 
                 System.out.print(currentNode.getValue());
